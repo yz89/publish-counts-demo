@@ -1,0 +1,22 @@
+
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<h1>publish-counts-demo</h1>
+	{{> main}}
+</body>
+
+<template name="main">
+	<h3>只订阅10条</h3>
+	<ul>
+		{{#each posts}}
+			<li>文章名：{{title}}</li>
+		{{/each}}
+	</ul>
+	<h3>客户端总条数：{{clientCount}}</h3>
+	<h3>服务器总条数：{{serverCount}}</h3>
+
+	<button>服务器里增加一条</button>
+</template>
